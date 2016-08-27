@@ -5,7 +5,7 @@
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="userName" value="rahmanww"/>
-    <parameter name="key" value=""/>
+    <parameter name="accessKey" value=""/>
     <parameter name="os" value="windows"/>
     <parameter name="browser" value="firefox"/>
     <parameter name="browserVersion" value="48"/>

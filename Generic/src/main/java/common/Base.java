@@ -2,6 +2,7 @@ package common;
 
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -35,22 +36,22 @@ public class Base {
 
 
     public WebDriver driver = null;
-    public static Logger logger = LogManager.getLogger(Base.class);
-    @Parameters({"usecloud","userName","accessKey","os","browserName","browserVersion","url"})
+//    public static Logger logger = LogManager.getLogger(Base.class);
+    @Parameters({"useCloudEnv","userName","accessKey","os","browserName","browserVersion","url"})
     @BeforeMethod
-    public void setUp(@Optional("false") boolean usecloud, @Optional("rahmanww") String userName, @Optional("")
+    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("rahmanww") String userName, @Optional("")
             String accessKey, @Optional("Windows 8") String os, @Optional("firefox") String browserName, @Optional("34")
-                              String browserVersion, @Optional("http://www.cnn.com") String url)throws IOException {
+                                   String browserVersion, @Optional("http://www.cnn.com") String url)throws IOException {
         BasicConfigurator.configure();
-        if(usecloud==true){
+        if(useCloudEnv==true){
             //run in cloud
             getCloudDriver(userName,accessKey,os,browserName,browserVersion);
-            logger.setLevel(Level.INFO);
-            logger.info("Test is running on Saucelabs");
+//            logger.setLevel(Level.INFO);
+//            logger.info("Test is running on Saucelabs");
         }else{
             //run in local
             getLocalDriver(browserName);
-            logger.info("Test is running on Local");
+//            logger.info("Test is running on Local");
         }
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -60,7 +61,7 @@ public class Base {
 
     public WebDriver getLocalDriver(String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
-            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\browser-driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\chromedriver.exe");
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
             driver = new FirefoxDriver();
