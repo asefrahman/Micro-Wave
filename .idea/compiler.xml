@@ -24,6 +24,8 @@
         <processorPath useClasspath="true" />
         <module name="Amazon" />
         <module name="Cnn" />
+        <module name="Ebay" />
+        <module name="Facebook" />
         <module name="Generic" />
         <module name="NYTimes" />
       </profile>
@@ -31,6 +33,8 @@
     <bytecodeTargetLevel>
       <module name="Amazon" target="1.8" />
       <module name="Cnn" target="1.8" />
+      <module name="Ebay" target="1.5" />
+      <module name="Facebook" target="1.5" />
       <module name="Generic" target="1.5" />
       <module name="NYTimes" target="1.8" />
       <module name="WebApp-Automation" target="1.5" />

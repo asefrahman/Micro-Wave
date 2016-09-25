@@ -39,9 +39,9 @@ public class Base {
 //    public static Logger logger = LogManager.getLogger(Base.class);
     @Parameters({"useCloudEnv","userName","accessKey","os","browserName","browserVersion","url"})
     @BeforeMethod
-    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("rahmanww") String userName, @Optional("")
-            String accessKey, @Optional("Windows 8") String os, @Optional("firefox") String browserName, @Optional("34")
-                                   String browserVersion, @Optional("http://www.cnn.com") String url)throws IOException {
+    public void setUp(@Optional("false") boolean useCloudEnv, @Optional("") String userName, @Optional("")
+            String accessKey, @Optional("Windows 10") String os, @Optional("firefox") String browserName, @Optional("48")
+                                   String browserVersion, @Optional("") String url)throws IOException {
         BasicConfigurator.configure();
         if(useCloudEnv==true){
             //run in cloud
@@ -61,12 +61,13 @@ public class Base {
 
     public WebDriver getLocalDriver(String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
-            System.setProperty("webdriver.chrome.driver","C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","E:\\workspace\\micro-wave\\Generic\\selenium-browser-driver\\chromedriver.exe");
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
+            System.setProperty("webdriver.gecko.driver", "E:\\workspace\\micro-wave\\Generic\\selenium-browser-driver\\geckodriver.exe");
             driver = new FirefoxDriver();
         } else if(browserName.equalsIgnoreCase("ie")) {
-            System.setProperty("webdriver.ie.driver", "Generic/browser-driver/IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", "Generic\\selenium browser-driver\\IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         }
         return driver;

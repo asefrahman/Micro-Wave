@@ -13,6 +13,8 @@
         <module>Amazon</module>
         <module>Cnn</module>
         <module>NYTimes</module>
+        <module>Facebook</module>
+        <module>Ebay</module>
     </modules>
 
        <dependencyManagement>
@@ -43,6 +45,11 @@
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml-schemas</artifactId>
                 <version>3.15-beta2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>3.13</version>
             </dependency>
             <dependency>
                 <groupId>log4j</groupId>
