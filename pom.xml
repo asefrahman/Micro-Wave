@@ -63,6 +63,14 @@
             </dependency>
        </dependencies>
     </dependencyManagement>
-
+    <profiles>
+    <profile>
+        <id>ebay-app</id>
+        <modules>
+            <module>Generic</module>
+            <module>Ebay</module>
+        </modules>
+    </profile>
+    </profiles>
 
 </project>
