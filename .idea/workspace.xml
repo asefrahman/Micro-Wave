@@ -4,9 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="336f4207-c217-4ea1-bf42-8ce20a8fa669" name="Default" comment="running suacelab">
+    <list default="true" id="336f4207-c217-4ea1-bf42-8ce20a8fa669" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="micro-wave.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1258,7 +1257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472316764494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+profiling">
+      <created>1474850571608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1474850571608</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1364,7 +1370,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="running suacelab" />
-    <option name="LAST_COMMIT_MESSAGE" value="running suacelab" />
+    <MESSAGE value="+profiling" />
+    <option name="LAST_COMMIT_MESSAGE" value="+profiling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
